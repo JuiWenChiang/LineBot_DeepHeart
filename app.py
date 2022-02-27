@@ -171,11 +171,19 @@ def sendTextMessageToMe():
     pushMessage({})
     return 'OK'
 
-def getLogin():
+def getLogin():    
+    def nextstep():
+        member = True
+        if member:
+            return '請輸入密碼'
+        else:
+            return '帳號密碼不存在'
     message = {
-        'type':'text',
-        'text':'請輸入帳號'}
-    return  message
+        'type': 'text',
+        'text': '請輸入帳號'}
+    nextstep()
+
+    return message and nextstep()
 
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
