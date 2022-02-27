@@ -46,8 +46,30 @@ def index():
 
                 if text == "我的名字":
                     payload["messages"] = [getNameEmojiMessage()]
-                elif text == "註冊":
-                    payload["messages"] = [getlogin()]
+                elif text == "出去玩囉":
+                    payload["messages"] = [getPlayStickerMessage()]
+                elif text == "台北101":
+                    payload["messages"] = [getTaipei101ImageMessage(),
+                                           getTaipei101LocationMessage(),
+                                           getMRTVideoMessage()]
+                elif text == "台北101圖":
+                    payload["messages"] = [getTaipei101ImageMessage()]
+                elif text == "台北101影片":
+                    payload["messages"] = [getMRTVideoMessage()]
+                elif text == "quoda":
+                    payload["messages"] = [
+                            {
+                                "type": "text",
+                                "text": getTotalSentMessageCount()
+                            }
+                        ]
+                elif text == "今日確診人數":
+                    payload["messages"] = [
+                            {
+                                "type": "text",
+                                "text": getTodayCovid19Message()
+                            }
+                        ]
                 elif text == "主選單":
                     payload["messages"] = [
                             {
@@ -242,19 +264,46 @@ def getCallCarMessage(data):
     return message
 
 
-def getlogin():
-    ud = input('請輸入帳號')
-    pw = input('請輸入密碼')
-    print(
-        f'您的帳號：\t: {ud}\n',
-        f'您的密碼：\t: {ud}\n')
+def getPlayStickerMessage():
+    message = dict()
+    message["type"] = "sticker"
+    message["packageId"] = "446"
+    message["stickerId"] = "1988"
+    return message
 
-    ans = input('是否正確？')
-    if ans == 'y':
-        print('您已登入')
-    else:
-        print('請重新輸入')
-        getlogin()
+
+def getTaipei101LocationMessage():
+    message = dict()
+    message["type"] = "location"
+    message["title"] = "台北101"
+    message["address"] = "110台北市信義區信義路五段7號"
+    message["latitude"] = 25.034056468449304
+    message["longitude"] = 121.56466736984362
+    return message
+
+
+def getMRTVideoMessage():
+    message = dict()
+    message["type"] = "video"
+    message["originalContentUrl"] = F"{end_point}/static/taipei_101_video.mp4"
+    message["previewImageUrl"] = F"{end_point}/static/taipei_101.jpeg"
+    return message
+
+
+def getMRTSoundMessage():
+    message = dict()
+    message["type"] = "audio"
+    message["originalContentUrl"] = F"{end_point}/static/mrt_sound.m4a"
+    import audioread
+    with audioread.audio_open('static/mrt_sound.m4a') as f:
+        # totalsec contains the length in float
+        totalsec = f.duration
+    message["duration"] = totalsec * 1000
+    return message
+
+
+def getTaipei101ImageMessage(originalContentUrl=F"{end_point}/static/taipei_101.jpeg"):
+    return getImageMessage(originalContentUrl)
 
 
 def getImageMessage(originalContentUrl):
@@ -273,6 +322,19 @@ def replyMessage(payload):
 def pushMessage(payload):
     response = requests.post("https://api.line.me/v2/bot/message/push",headers=HEADER,data=json.dumps(payload))
     return 'OK'
+
+
+def getTotalSentMessageCount():
+    response = requests.get("https://api.line.me/v2/bot/message/quota/consumption",headers=HEADER)
+    return response.json()["totalUsage"]
+
+
+def getTodayCovid19Message():
+    response = requests.get("https://covid-19.nchc.org.tw/api/covid19?CK=covid-19@nchc.org.tw&querydata=4001&limited=TWN")
+    date = response.json()[0]["a04"]
+    total_count = response.json()[0]["a05"]
+    count = response.json()[0]["a06"]
+    return F"日期：{date}, 人數：{count}, 確診總人數：{total_count}"
 
 
 def allowed_file(filename):
@@ -338,3 +400,4 @@ def line_login():
 if __name__ == "__main__":
     app.debug = True
     app.run()
+
