@@ -154,37 +154,13 @@ def callback():
 
     return 'OK'
 
+
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    message_text = event.message.text
-
-    if message_text == '@status':
-        line_bot_api.reply_message(
-            event.reply_token,
-            ImageSendMessage(
-                original_content_url='https://cdn.pixabay.com/photo/2017/05/24/08/06/males-2339835_1280.jpg',
-                preview_image_url='https://cdn.pixabay.com/photo/2017/05/24/08/06/males-2339835_1280.jpg'))
-    elif message_text == '@location':
-        line_bot_api.reply_message(
-            event.reply_token,
-            LocationSendMessage(
-                title='my location',
-                address='110台北市信義區信義路五段7號',
-                latitude=25.03407319331001,
-                longitude=121.56451743964467))
-    elif message_text == '@register':
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text='This is keyword for @register!'))
-    elif message_text == '@message':
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text='This is keyword for @message!'))
-    else:
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text='Please input valid keyword!'))
-
+def pretty_echo(event):
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=event.message.text)
+        )
 
 @app.route("/sendTextMessageToMe", methods=['POST'])
 def sendTextMessageToMe():
