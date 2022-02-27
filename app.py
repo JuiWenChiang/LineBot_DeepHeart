@@ -46,6 +46,10 @@ def index():
 
                 if text == "我的名字":
                     payload["messages"] = [getNameEmojiMessage()]
+                
+                elif text == "註冊":
+                    payload["messages"] = [getLogin()]
+                    
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
                 elif text == "台北101":
@@ -167,6 +171,11 @@ def sendTextMessageToMe():
     pushMessage({})
     return 'OK'
 
+def getLogin():
+    message = {
+        'type':'text',
+        'text':'請輸入帳號'}
+    return  message
 
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
