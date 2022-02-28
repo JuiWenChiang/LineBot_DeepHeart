@@ -226,34 +226,74 @@ def getHelp():
             "type": "carousel",
             "columns": [
                 {
+                    "thumbnailImageUrl": "https://eu-browse.startpage.com/av/anon-image?piurl=https%3A%2F%2Fwww.tcpu.org.tw%2Fimages%2Fglobal%2FLOGO%25E5%2596%25AE%25E7%258D%25A8%25E6%25AA%2594.png&sp=1646042317T2cbd31444980d78681192e9c45363a5af65b3129a9add4d718cae4852e8da921",
+                    "imageBackgroundColor": "#000000",
                     "title": "諮商心理師公會全國聯合會",
-                    "text": "description",
+                    "text": "播打:02-2511-8173",
                     "defaultAction": {
                         "type": "uri",
-                        "label": "View detail",
+                        "label": "前往首頁",
                         "uri": "https://www.tcpu.org.tw/people-area.html"
                     },
                     "actions": [
                         {
                             "type": "uri",
-                            "label": "前往官網",
+                            "label": "前往民眾專區",
                             "uri": "https://www.tcpu.org.tw/people-area.html"
                         }
                     ]
                 },
                 {
-                    "title": "this is menu",
-                    "text": "description",
+                    "thumbnailImageUrl": "https://eu-browse.startpage.com/av/anon-image?piurl=https%3A%2F%2Fpicture-thumb.fevercdn.com%2Fpage-commonhealth-2021618-bfa6dee4-28cb-4bac-8de0-2f5701e96685-600.jpg&sp=1646042497T2f1379b7b360cc469672686606338317148b2c0f7f8eced4a7aab1fdf0354403",
+                    "imageBackgroundColor": "#000000",
+                    "title": "華人心理治療基金會",
+                    "text": "播打:02-7700-7866",
                     "defaultAction": {
                         "type": "uri",
-                        "label": "View detail",
-                        "uri": "http://example.com/page/222"
+                        "label": "前往首頁",
+                        "uri": "https://www.tip.org.tw/"
                     },
                     "actions": [
                         {
                             "type": "uri",
-                            "label": "View detail",
-                            "uri": "http://example.com/page/222"
+                            "label": "我需要面對面諮商",
+                            "uri": "https://www.tip.org.tw/f2fbooking"
+                        }
+                    ]
+                },
+                {
+                    "thumbnailImageUrl": "https://eu-browse.startpage.com/av/anon-image?piurl=http%3A%2F%2Fwww.life1995.org.tw%2Fimage%2Findex_photo.jpg&sp=1646042934T9bdb7cf115fc2a7c35ce79aed539328c87170d55ad19549e1e4059b8a2856442",
+                    "imageBackgroundColor": "#000000",
+                    "title": "國際生命線台灣總會",
+                    "text": "播打:1995",
+                    "defaultAction": {
+                        "type": "uri",
+                        "label": "前往首頁",
+                        "uri": "http://www.life1995.org.tw/content.asp?id=14"
+                    },
+                    "actions": [
+                        {
+                            "type": "uri",
+                            "label": "服務項目",
+                            "uri": "http://www.life1995.org.tw/content.asp?id=8"
+                        }
+                    ]
+                },
+                {
+                    "thumbnailImageUrl": "https://eu-browse.startpage.com/av/anon-image?piurl=https%3A%2F%2Fwww.igiving.org.tw%2Fupload%2Fnpo%2F89%2Flogo.jpg&sp=1646042884T7c8bbbccfd635e2f18e884ec3c362cb570ddfd9b15302b27b9e982443baf6aea",
+                    "imageBackgroundColor": "#000000",
+                    "title": "張老師基金會",
+                    "text": "播打:1980",
+                    "defaultAction": {
+                        "type": "uri",
+                        "label": "前往首頁",
+                        "uri": "http://www.1980.org.tw/web3-20101110/main.php?customerid=3"
+                    },
+                    "actions": [
+                        {
+                            "type": "uri",
+                            "label": "使用者專區",
+                            "uri": "http://www.1980.org.tw/vlr/login-v3.htm"
                         }
                     ]
                 }
@@ -263,6 +303,7 @@ def getHelp():
         }
     }
     return message
+
 
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
