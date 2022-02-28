@@ -217,6 +217,7 @@ def getGames():
         }
     return message
 
+
 def getHelp():
     message = {
         "type": "template",
