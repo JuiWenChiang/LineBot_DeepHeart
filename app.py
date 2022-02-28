@@ -228,18 +228,58 @@ def getHelp():
                 {
                     "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
                     "imageBackgroundColor": "#FFFFFF",
-                    "title": "this is menu",
+                    "title": "中華民國諮商心理師公會全國聯合會",
                     "text": "description",
-                    "defaultAction": {"type": "uri", "label": "View detail", "uri": "http://example.com/page/123"},
-                    "actions": {"type": "uri", "label": "View detail", "uri": "http://example.com/page/111"}
+                    "defaultAction": {
+                        "type": "uri",
+                        "label": "View detail",
+                        "uri": "https://www.tcpu.org.tw/people-area.html"
+                    },
+                    "actions": [
+                        {
+                            "type": "postback",
+                            "label": "Buy",
+                            "data": "action=buy&itemid=111"
+                        },
+                        {
+                            "type": "postback",
+                            "label": "Add to cart",
+                            "data": "action=add&itemid=111"
+                        },
+                        {
+                            "type": "uri",
+                            "label": "前往官網",
+                            "uri": "https://www.tcpu.org.tw/people-area.html"
+                        }
+                    ]
                 },
                 {
-                    "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
-                    "imageBackgroundColor": "#FFFFFF",
+                    "thumbnailImageUrl": "https://example.com/bot/images/item2.jpg",
+                    "imageBackgroundColor": "#000000",
                     "title": "this is menu",
                     "text": "description",
-                    "defaultAction": {"type": "uri", "label": "View detail", "uri": "http://example.com/page/123"},
-                    "actions": {"type": "uri", "label": "View detail", "uri": "http://example.com/page/111"}
+                    "defaultAction": {
+                        "type": "uri",
+                        "label": "View detail",
+                        "uri": "http://example.com/page/222"
+                    },
+                    "actions": [
+                        {
+                            "type": "postback",
+                            "label": "Buy",
+                            "data": "action=buy&itemid=222"
+                        },
+                        {
+                            "type": "postback",
+                            "label": "Add to cart",
+                            "data": "action=add&itemid=222"
+                        },
+                        {
+                            "type": "uri",
+                            "label": "View detail",
+                            "uri": "http://example.com/page/222"
+                        }
+                    ]
                 }
             ],
             "imageAspectRatio": "rectangle",
@@ -247,7 +287,6 @@ def getHelp():
         }
     }
     return message
-
 
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
