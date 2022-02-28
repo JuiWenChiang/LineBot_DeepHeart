@@ -50,8 +50,7 @@ def index():
                 elif text == "註冊":
                     payload["messages"] = [getLogin()]
                 elif text == '心理測驗':
-                    payload['message'] = [getgames()]
-                    
+                    payload["message"] = [getGames()]
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
                 elif text == "台北101":
@@ -188,35 +187,32 @@ def getLogin():
     return message and nextstep()
 
 
-def getgames():
+def getGames():
     message = {
-  "type": "text",
-  "text": "問題",
-  "quickReply": {
-    "items": [
-      {
-        "type": "action",
-        "imageUrl": "https://example.com/sushi.png",
-        "action": {
-          "type": "message",
-          "label": "A.台北",
-          "text": "台北"
+      "type": "text",
+      "text": "心理測驗",
+      "quickReply": {
+          "items": [
+              {
+                "imageUrl": "https://example.com/sushi.png",
+                "action": {
+                  "type": "message",
+                  "label": "開心",
+                  "text": "開心",
+                }
+              },
+              {
+                "imageUrl": "https://example.com/tempura.png",
+                "action": {
+                  "type": "message",
+                  "label": "不開心",
+                  "text": "不開心",
+                }
+              }
+          ]
+          }
         }
-      },
-      {
-        "type": "action",
-        "imageUrl": "https://example.com/sushi.png",
-        "action": {
-          "type": "message",
-          "label": "B.台中",
-          "text": "台中"
-        }
-      }
-      }
-    ]
-  }
-}
-
+    return message
 
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
