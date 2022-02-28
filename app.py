@@ -49,6 +49,8 @@ def index():
                 
                 elif text == "註冊":
                     payload["messages"] = [getLogin()]
+                elif text == '心理測驗':
+                    payload['message'] = [getgames()]
                     
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
@@ -184,6 +186,35 @@ def getLogin():
     nextstep()
 
     return message and nextstep()
+
+
+def getgames():
+    message = {
+  "type": "text",
+  "text": "問題",
+  "quickReply": {
+    "items": [
+      {
+        "type": "action",
+        "action": {
+          "type": "message",
+          "label": "A.台北",
+          "text": "台北"
+        }
+      },
+      {
+        "type": "action",
+        "action": {
+          "type": "message",
+          "label": "B.台中",
+          "text": "台中"
+        }
+      }
+      }
+    ]
+  }
+}
+
 
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
