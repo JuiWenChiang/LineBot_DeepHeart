@@ -225,7 +225,7 @@ def getHelp():
             "type":"carousel",
             "columns":[
                 {
-                    "thumbnailImageUrl":"",
+                    "thumbnailImageUrl":"https://eu-browse.startpage.com/av/anon-image?piurl=https%3A%2F%2Fwww.tcpu.org.tw%2Fimages%2Fglobal%2FLOGO%25E5%2596%25AE%25E7%258D%25A8%25E6%25AA%2594.png&sp=1646037951T251c4a631ad6d778de8882083a2e953e515c80dc75d3304796fb98d217b17d30",
                     "title": "中華民國諮商心理師公會全國聯合會",
                     "text": "description",
                     "defaultAction": {
@@ -240,7 +240,7 @@ def getHelp():
                     }
                 },
                 {
-                    "thumbnailImageUrl":"",
+                    "thumbnailImageUrl":"https://eu-browse.startpage.com/av/anon-image?piurl=https%3A%2F%2Fwww.tcpu.org.tw%2Fimages%2Fglobal%2FLOGO%25E5%2596%25AE%25E7%258D%25A8%25E6%25AA%2594.png&sp=1646037951T251c4a631ad6d778de8882083a2e953e515c80dc75d3304796fb98d217b17d30",
                     "title": "國際生命台灣總會",
                     "text": "description",
                     "defaultAction": {
