@@ -46,7 +46,6 @@ def index():
 
                 if text == "我的名字":
                     payload["messages"] = [getNameEmojiMessage()]
-                
                 elif text == "註冊":
                     payload["messages"] = [getLogin()]
                 elif text == '心理測驗':
@@ -194,6 +193,7 @@ def getGames():
       "quickReply": {
           "items": [
               {
+                "type":"action",
                 "imageUrl": "https://example.com/sushi.png",
                 "action": {
                   "type": "message",
@@ -202,7 +202,8 @@ def getGames():
                 }
               },
               {
-                "imageUrl": "https://example.com/tempura.png",
+                "type":"action",
+                "imageUrl": "https://example.com/sushi.png",
                 "action": {
                   "type": "message",
                   "label": "不開心",
