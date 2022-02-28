@@ -49,7 +49,7 @@ def index():
                 elif text == "註冊":
                     payload["messages"] = [getLogin()]
                 elif text == '心理測驗':
-                    payload["message"] = [getGames()]
+                    payload["messages"] = [getGames()]
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
                 elif text == "台北101":
