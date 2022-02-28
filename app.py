@@ -50,7 +50,7 @@ def index():
                     payload["messages"] = [getLogin()]
                 elif text == '心理測驗':
                     payload["messages"] = [getGames()]
-                elif text == '專業管道':
+                elif text == '專業諮商':
                     payload["messages"] = [getHelp()]
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
