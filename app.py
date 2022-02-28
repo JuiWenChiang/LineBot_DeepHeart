@@ -220,27 +220,25 @@ def getGames():
 def getHelp():
     message = {
         "type": "template",
-        "altText": "this is a image carousel template",
+        "altText": "this is a carousel template",
         "template": {
             "type": "carousel",
             "columns": [
                 {
-                    "title": "中華民國諮商心理師公會全國聯合會",
-                    "text": "中華民國諮商心理師公會全國聯合會",
-                    "action": {
-                        "type": "uri",
-                        "label": "前往官網",
-                        "uri": "https://www.tcpu.org.tw/people-area.html"
-                    }
+                    "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+                    "imageBackgroundColor": "#FFFFFF",
+                    "title": "this is menu",
+                    "text": "description",
+                    "defaultAction": {"type": "uri", "label": "View detail", "uri": "http://example.com/page/123"},
+                    "actions": {"type": "uri", "label": "View detail", "uri": "http://example.com/page/111"}
                 },
                 {
-                    "title": "國際生命台灣總會",
-                    "text": "國際生命台灣總會",
-                    "action": {
-                        "type": "uri",
-                        "label": "前往官網",
-                        "uri": "http://www.life1995.org.tw/content.asp?id=8"
-                    }
+                    "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+                    "imageBackgroundColor": "#FFFFFF",
+                    "title": "this is menu",
+                    "text": "description",
+                    "defaultAction": {"type": "uri", "label": "View detail", "uri": "http://example.com/page/123"},
+                    "actions": {"type": "uri", "label": "View detail", "uri": "http://example.com/page/111"}
                 }
             ],
             "imageAspectRatio": "rectangle",
@@ -248,6 +246,8 @@ def getHelp():
         }
     }
     return message
+
+
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
