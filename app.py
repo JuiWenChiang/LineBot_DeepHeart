@@ -226,57 +226,23 @@ def getHelp():
             "columns":[
                 {
                     "thumbnailImageUrl":"https://example.com/bot/images/item1.jpg",
-                    "title": "this is menu",
+                    "title": "中華民國諮商心理師公會全國聯合會",
                     "text": "description",
                     "defaultAction": {
                         "type": "uri",
                         "label": "View detail",
-                        "uri": "http://example.com/page/123"
-                    },
-                    "actions": [
-                        {
-                            "type": "postback",
-                            "label": "Buy",
-                            "data": "action=buy&itemid=111"
-                        },
-                        {
-                            "type": "postback",
-                            "label": "Add to cart",
-                            "data": "action=add&itemid=111"
-                        },
-                        {
-                            "type": "uri",
-                            "label": "View detail",
-                            "uri": "http://example.com/page/111"
-                        }
-                    ]
+                        "uri": "https://www.tcpu.org.tw/people-area.html"
+                    }
                 },
                 {
                     "thumbnailImageUrl":"https://example.com/bot/images/item1.jpg",
-                    "title": "this is menu",
+                    "title": "國際生命台灣總會",
                     "text": "description",
                     "defaultAction": {
                         "type": "uri",
                         "label": "View detail",
-                        "uri": "http://example.com/page/123"
-                    },
-                    "actions": [
-                        {
-                            "type": "postback",
-                            "label": "Buy",
-                            "data": "action=buy&itemid=111"
-                        },
-                        {
-                            "type": "postback",
-                            "label": "Add to cart",
-                            "data": "action=add&itemid=111"
-                        },
-                        {
-                            "type": "uri",
-                            "label": "View detail",
-                            "uri": "http://example.com/page/111"
-                        }
-                    ]
+                        "uri": "http://www.life1995.org.tw/content.asp?id=8"
+                    }
                  }
             ],
             "imageAspectRatio": "rectangle",
@@ -284,6 +250,74 @@ def getHelp():
         }
     }
     return message
+
+# def getHelp():
+#     message = {
+#         "type":"template",
+#         "altText":"this is a carousel template",
+#         "template":{
+#             "type":"carousel",
+#             "columns":[
+#                 {
+#                     "thumbnailImageUrl":"https://example.com/bot/images/item1.jpg",
+#                     "title": "this is menu",
+#                     "text": "description",
+#                     "defaultAction": {
+#                         "type": "uri",
+#                         "label": "View detail",
+#                         "uri": "http://example.com/page/123"
+#                     },
+#                     "actions": [
+#                         {
+#                             "type": "postback",
+#                             "label": "Buy",
+#                             "data": "action=buy&itemid=111"
+#                         },
+#                         {
+#                             "type": "postback",
+#                             "label": "Add to cart",
+#                             "data": "action=add&itemid=111"
+#                         },
+#                         {
+#                             "type": "uri",
+#                             "label": "View detail",
+#                             "uri": "http://example.com/page/111"
+#                         }
+#                     ]
+#                 },
+#                 {
+#                     "thumbnailImageUrl":"https://example.com/bot/images/item1.jpg",
+#                     "title": "this is menu",
+#                     "text": "description",
+#                     "defaultAction": {
+#                         "type": "uri",
+#                         "label": "View detail",
+#                         "uri": "http://example.com/page/123"
+#                     },
+#                     "actions": [
+#                         {
+#                             "type": "postback",
+#                             "label": "Buy",
+#                             "data": "action=buy&itemid=111"
+#                         },
+#                         {
+#                             "type": "postback",
+#                             "label": "Add to cart",
+#                             "data": "action=add&itemid=111"
+#                         },
+#                         {
+#                             "type": "uri",
+#                             "label": "View detail",
+#                             "uri": "http://example.com/page/111"
+#                         }
+#                     ]
+#                  }
+#             ],
+#             "imageAspectRatio": "rectangle",
+#             "imageSize": "cover"
+#         }
+#     }
+#     return message
 
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
