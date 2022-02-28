@@ -225,22 +225,32 @@ def getHelp():
             "type":"carousel",
             "columns":[
                 {
-                    "thumbnailImageUrl":"https://example.com/bot/images/item1.jpg",
+                    "thumbnailImageUrl":"",
                     "title": "中華民國諮商心理師公會全國聯合會",
                     "text": "description",
                     "defaultAction": {
                         "type": "uri",
                         "label": "View detail",
                         "uri": "https://www.tcpu.org.tw/people-area.html"
+                    },
+                    "actions":{
+                        "type": "text",
+                        "label": "前往網站",
+                        "uri": "https://www.tcpu.org.tw/people-area.html"
                     }
                 },
                 {
-                    "thumbnailImageUrl":"https://example.com/bot/images/item1.jpg",
+                    "thumbnailImageUrl":"",
                     "title": "國際生命台灣總會",
                     "text": "description",
                     "defaultAction": {
                         "type": "uri",
                         "label": "View detail",
+                        "uri": "http://www.life1995.org.tw/content.asp?id=8"
+                    },
+                    "actions":{
+                        "type": "text",
+                        "label": "前往網站",
                         "uri": "http://www.life1995.org.tw/content.asp?id=8"
                     }
                  }
