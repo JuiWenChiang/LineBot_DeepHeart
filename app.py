@@ -196,6 +196,7 @@ def getgames():
     "items": [
       {
         "type": "action",
+        "imageUrl": "https://example.com/sushi.png",
         "action": {
           "type": "message",
           "label": "A.台北",
@@ -204,6 +205,7 @@ def getgames():
       },
       {
         "type": "action",
+        "imageUrl": "https://example.com/sushi.png",
         "action": {
           "type": "message",
           "label": "B.台中",
