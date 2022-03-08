@@ -49,20 +49,6 @@ def index():
                 elif text == "註冊":
                     payload["messages"] = [getLogin()]
                 elif text == '心理測驗':
-                    your_sum = 0
-                    scoring1 = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
-                    question1 = {'question': '1.我覺得想哭', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question2 = {'question': '2.我覺得心情不好', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    status1 = '您的心已經感冒了，心病需要心藥醫，趕緊到醫院找專業及可信賴的醫師檢查，透過他們的診療與治療，你將不會覺得孤單、無助!'
-                    status2 = '現在的你必定感到相當不順心，無法展露笑容，一肚子苦惱及煩悶，連朋友也不知道如何幫你，趕緊找專業機構或醫療單位協助，透過專業機構的協助，必可重拾笑容！'
-                    
-                    if your_sum >= 6:
-                        print(status1)
-                    elif your_sum >= 0 and your_sum < 6:
-                        print(status2)
-                    else:
-                        print('異常狀態請重新測驗')
-                    
                     payload["messages"] = [show_game()]
                                   
                 elif text == '專業諮商':
@@ -203,6 +189,13 @@ def getLogin():
     return message and nextstep()
 
 def show_game():
+    your_sum = 0
+    scoring1 = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
+    question1 = {'question': '1.我覺得想哭', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+    question2 = {'question': '2.我覺得心情不好', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+    status1 = '您的心已經感冒了，心病需要心藥醫，趕緊到醫院找專業及可信賴的醫師檢查，透過他們的診療與治療，你將不會覺得孤單、無助!'
+    status2 = '現在的你必定感到相當不順心，無法展露笑容，一肚子苦惱及煩悶，連朋友也不知道如何幫你，趕緊找專業機構或醫療單位協助，透過專業機構的協助，必可重拾笑容！'
+
     def getGames(question, scoring):
         q = question.get('question')
         print(q)
@@ -229,7 +222,6 @@ def show_game():
         print(status2)
     else:
         print('異常狀態請重新測驗')
-                                  
 
 # def getGames():
 #     message = {
