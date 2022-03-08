@@ -71,20 +71,20 @@ def index():
                     status4 = '最近的情緒是否起伏不定？或是有些事情在困擾著你？給自己多點關心，多注意情緒的變化，試著瞭解心情變的緣由，做適時的處理，比較不會陷入憂鬱情緒。'
                     status5 = '真是令人羨慕！你目前的情緒狀態很穩定，是個懂得適時調整情緒及抒解壓力的人，繼續保持下去。'
 
-                    getGames(question1, scoring1)
-                    getGames(question2, scoring1)
-                    getGames(question3, scoring1)
-                    getGames(question4, scoring1)
-                    getGames(question5, scoring1)
-                    getGames(question6, scoring1)
-                    getGames(question7, scoring1)
-                    getGames(question8, scoring1)
-                    getGames(question9, scoring1)
-                    getGames(question10, scoring1)
-                    getGames(question11, scoring1)
-                    getGames(question12, scoring1)
-                    getGames(question13, scoring1)
-                    getGames(question14, scoring1)
+#                     getGames(question1, scoring1)
+#                     getGames(question2, scoring1)
+#                     getGames(question3, scoring1)
+#                     getGames(question4, scoring1)
+#                     getGames(question5, scoring1)
+#                     getGames(question6, scoring1)
+#                     getGames(question7, scoring1)
+#                     getGames(question8, scoring1)
+#                     getGames(question9, scoring1)
+#                     getGames(question10, scoring1)
+#                     getGames(question11, scoring1)
+#                     getGames(question12, scoring1)
+#                     getGames(question13, scoring1)
+#                     getGames(question14, scoring1)
 
                     if your_sum >= 29:
                         print(status1)
@@ -98,7 +98,8 @@ def index():
                         print(status5)
                     else:
                         print('異常狀態請重新測驗')
-                    payload["messages"] = [getGames()]                     
+                    payload["messages"] = [getGames()]  
+                                  
                 elif text == '專業諮商':
                     payload["messages"] = [getHelp()]
                 elif text == "出去玩囉":
@@ -238,6 +239,20 @@ def getLogin():
 
  
 def getGames(question, scoring):
+    getGames(question1, scoring1)
+    getGames(question2, scoring1)
+#                     getGames(question3, scoring1)
+#                     getGames(question4, scoring1)
+#                     getGames(question5, scoring1)
+#                     getGames(question6, scoring1)
+#                     getGames(question7, scoring1)
+#                     getGames(question8, scoring1)
+#                     getGames(question9, scoring1)
+#                     getGames(question10, scoring1)
+#                     getGames(question11, scoring1)
+#                     getGames(question12, scoring1)
+#                     getGames(question13, scoring1)
+#                     getGames(question14, scoring1)                              
     q = question.get('question')
     print(q)
     l = question['answer']
@@ -252,6 +267,8 @@ def getGames(question, scoring):
     global your_sum
     your_sum += score
     your_status = '您的狀態為：\n'
+                                  
+                                  
     return your_status                              
                                   
 
