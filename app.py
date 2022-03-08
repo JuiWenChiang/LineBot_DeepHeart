@@ -202,7 +202,7 @@ def show_game():
         l = question['answer']
         for allans in l:
             print(allans)
-        yourans = input('> ')
+        yourans = line_bot_api.reply_message
         score = scoring.get(yourans.upper())
         if score == None:
             print('您輸入的答案不存在喔')
@@ -216,9 +216,9 @@ def show_game():
     getGames(question1, scoring1)
     getGames(question2, scoring1)
 
-    if your_sum >= 29:
+    if your_sum <= 6:
         print(status1)
-    elif your_sum >= 19 and your_sum < 29:
+    elif your_sum >= 0 and your_sum < 3:
         print(status2)
     else:
         print('異常狀態請重新測驗')
