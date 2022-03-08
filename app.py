@@ -49,42 +49,41 @@ def index():
                 elif text == "註冊":
                     payload["messages"] = [getLogin()]
                 elif text == '心理測驗':
+                    ans = 'A, B, C,D'
                     your_sum = 0
                     scoring1 = {'A': 0, 'B': 1, 'C': 2, 'D': 3, }
                     question1 = {'question': '1.我覺得想哭', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question2 = {'question': '2.我覺得心情不好', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question3 = {'question': '3.我覺得比以前更容易發脾氣', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question4 = {'question': '4.我覺得胸口悶悶的(心肝頭或胸坎綁綁的)', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question5 = {'question': '5.我覺得不輕鬆、不舒服(不適快)', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question6 = {'question': '6.我覺得身體疲勞虛弱無力', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question7 = {'question': '7.我覺得記憶力不好', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question8 = {'question': '8.我覺得做事時無法專心 ', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question9 = {'question': '9.我覺得想事情或做事時比平常要緩慢', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question10 = {'question': '10.我覺得比較會往壞處想', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question11 = {'question': '11.我覺得想不開、甚至想死', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']
-                    question12 = {'question': '12.我覺得對什麼事都失去興趣', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question13 = {'question': '13.我覺得身體不舒服', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
-                    question14 = {'question': '14.我覺得自己很沒用', 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question2 = {'question': '2.我覺得心情不好',
+                                 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question3 = {'question': '3.我覺得比以前更容易發脾氣',
+                                 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question4 = {'question': '4.我覺得胸口悶悶的(心肝頭或胸坎綁綁的)',
+                                 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question5 = {'question': '5.我覺得不輕鬆、不舒服(不適快)',
+                                 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question6 = {'question': '6.我覺得身體疲勞虛弱無力',
+                                 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question7 = {'question': '7.我覺得記憶力不好',
+                                 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question8 = {'question': '8.我覺得做事時無法專心 ',
+                                 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question9 = {'question': '9.我覺得想事情或做事時比平常要緩慢',
+                                 'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question10 = {'question': '10.我覺得比較會往壞處想',
+                                  'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question11 = {'question': '11.我覺得想不開、甚至想死',
+                                  'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question12 = {'question': '12.我覺得對什麼事都失去興趣',
+                                  'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question13 = {'question': '13.我覺得身體不舒服',
+                                  'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
+                    question14 = {'question': '14.我覺得自己很沒用',
+                                  'answer': ['A.一週內一天以下', 'B.一週內一到二天', 'C.一週內三到四天', 'D.一週內五到七天']}
                     status1 = '您的心已經感冒了，心病需要心藥醫，趕緊到醫院找專業及可信賴的醫師檢查，透過他們的診療與治療，你將不會覺得孤單、無助!'
                     status2 = '現在的你必定感到相當不順心，無法展露笑容，一肚子苦惱及煩悶，連朋友也不知道如何幫你，趕緊找專業機構或醫療單位協助，透過專業機構的協助，必可重拾笑容！!'
                     status3 = '你是不是想笑又笑不太出來，有很多事壓在心上，肩上總覺得很沈重？因為你的壓力負荷量已經到了臨界點了！千萬別再「撐」了！趕快找個有相同經驗的朋友聊聊，給心情找個出口，把肩上的重膽放下，這樣才不會陷入憂鬱症的漩渦。'
                     status4 = '最近的情緒是否起伏不定？或是有些事情在困擾著你？給自己多點關心，多注意情緒的變化，試著瞭解心情變的緣由，做適時的處理，比較不會陷入憂鬱情緒。'
                     status5 = '真是令人羨慕！你目前的情緒狀態很穩定，是個懂得適時調整情緒及抒解壓力的人，繼續保持下去。'
-
-#                     getGames(question1, scoring1)
-#                     getGames(question2, scoring1)
-#                     getGames(question3, scoring1)
-#                     getGames(question4, scoring1)
-#                     getGames(question5, scoring1)
-#                     getGames(question6, scoring1)
-#                     getGames(question7, scoring1)
-#                     getGames(question8, scoring1)
-#                     getGames(question9, scoring1)
-#                     getGames(question10, scoring1)
-#                     getGames(question11, scoring1)
-#                     getGames(question12, scoring1)
-#                     getGames(question13, scoring1)
-#                     getGames(question14, scoring1)
 
                     if your_sum >= 29:
                         print(status1)
@@ -98,7 +97,24 @@ def index():
                         print(status5)
                     else:
                         print('異常狀態請重新測驗')
-                    payload["messages"] = [getGames()]  
+
+                    getGames(question1, scoring1)
+                    getGames(question2, scoring1)
+                    getGames(question3, scoring1)
+                    getGames(question4, scoring1)
+                    getGames(question5, scoring1)
+                    getGames(question6, scoring1)
+                    getGames(question7, scoring1)
+                    getGames(question8, scoring1)
+                    getGames(question9, scoring1)
+                    getGames(question10, scoring1)
+                    getGames(question11, scoring1)
+                    getGames(question12, scoring1)
+                    getGames(question13, scoring1)
+                    getGames(question14, scoring1)
+
+                    if i in ans:
+                        payload["messages"] = [getGames()]
                                   
                 elif text == '專業諮商':
                     payload["messages"] = [getHelp()]
@@ -238,21 +254,7 @@ def getLogin():
     return message and nextstep()
 
  
-def getGames(question, scoring):
-    getGames(question1, scoring1)
-    getGames(question2, scoring1)
-#                     getGames(question3, scoring1)
-#                     getGames(question4, scoring1)
-#                     getGames(question5, scoring1)
-#                     getGames(question6, scoring1)
-#                     getGames(question7, scoring1)
-#                     getGames(question8, scoring1)
-#                     getGames(question9, scoring1)
-#                     getGames(question10, scoring1)
-#                     getGames(question11, scoring1)
-#                     getGames(question12, scoring1)
-#                     getGames(question13, scoring1)
-#                     getGames(question14, scoring1)                              
+def getGames(question, scoring):                         
     q = question.get('question')
     print(q)
     l = question['answer']
@@ -266,9 +268,7 @@ def getGames(question, scoring):
         return
     global your_sum
     your_sum += score
-    your_status = '您的狀態為：\n'
-                                  
-                                  
+    your_status = '您的狀態為：\n'                              
     return your_status                              
                                   
 
